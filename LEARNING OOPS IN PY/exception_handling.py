@@ -1,0 +1,26 @@
+try:
+    a=int(input())
+    b=int(input())
+    c=input()
+    print(a+b)
+    print(a/int(c))
+    print(a/a)
+    print(a/b)
+except ValueError as error1:
+    print("value error is ",error1) 
+except TypeError as error2:
+    print("data type error is ",error2)
+except ZeroDivisionError as error3:
+    print("divided by undefined number:",error3)
+#TYPES OF ERRORS:
+'''
+class SystemError(Exception):
+class TypeError(Exception): ...
+class ValueError(Exception): ...
+class FloatingPointError(ArithmeticError): ...
+class OverflowError(ArithmeticError): ...
+class ZeroDivisionError(ArithmeticError): ...
+class ModuleNotFoundError(ImportError): ...
+class IndexError(LookupError): ...
+class KeyError(LookupError): ...
+class UnboundLocalError(NameError):'''
