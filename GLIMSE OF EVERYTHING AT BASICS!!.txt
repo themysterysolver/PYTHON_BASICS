@@ -1,0 +1,237 @@
+--------------------------------------------------------------------------------------------------------------------
+PYTHON VARIABLES:
+---------------------------------------------------------------------------------------------------------------------
+'''
+a=100               #single line coment
+print("the number a is ",a)
+a=input("enter a number:")
+print("the number a again is ",a)
+multiline
+comment
+'''
+a, i = int(input("enter the value of a: ")), int(input("enter the value of i to find 'the ith power of a': "))
+print("a**i =", a**i) #a power i
+print("a%i=",a%i)
+min=print("a is even") if (a%2==0) else print("odd")
+a=0b0010 #binary
+b=0o54  #octal
+c=0x12C #hexadecimal
+d="hello world"
+print(d)
+f=float(input("enter no in float:\t"))
+print(f)
+f=1.5e3
+print("f=1.5e3",f,"can also be written like this!")
+x=3+2j #j not i as per mathematics
+print("real part is",x.real,"imaginary part is",x.imag,"the complex literal is ",x)
+
+----------------------------------------------------------------------------------------------------------------------------------
+CONTOL STRUCTURES:
+-----------------------------------------------------------------------------------------------------------------------------------
+x=int(input("enter x:"))
+if x>=90 and x<100: #and 
+        print("O grade")
+elif  x>=80 and x<90: #rem :
+        print("A+ grade")
+else:
+        print("failed")
+if "hello" in "My name is prabha! hello":
+        print("found")
+else:
+        print("not found")
+n=int(input("enter n:")) #sum
+sum=float((n*(n+1))/2)
+print("sum of n natural numbers:",sum)
+sum=0
+i=0
+while(i<=n): #while loop #whille loop can have a else part too!!
+        sum=sum+i
+        i=i+1
+print("sum of n natural numbers:",sum)
+for ch in "hello":  #ch was never declared!!
+    print(ch,end='') #in this case output will come in the same line adjacent to each other!!!!!
+print("\n")
+for i in range(-10,11,1): #start,end,step     #also end=end-step!!! #range(20),0-19 inc by step 1!!
+    print(i,sep='\n')
+# make use of pass,continue,break!!
+
+----------------------------------------------------------------------------------------------------------------------------------
+FUNCTIONS:
+-----------------------------------------------------------------------------------------------------------------------------------
+#functions!!
+'''' retutrn none is nothing is returned
+    arguments-values,parameters-f() def
+    required,keyword,anonymous or lambda,recursive'''
+#def keyword is used!!
+''' a global varaible can't be accessed without pasing them into a block else use global <variable> keyword'''
+'''n=int(input("enter a no:"))
+def fact(n):
+    i=1
+    f=1
+    while(i<=n):
+        f=f*i
+        i=i+1
+    return f
+a=fact(n)
+print("the factorial of",n,"is",a)'''
+#does not necesarily need to return....nothing returns resuts o/p as NONE!
+#default arguments in function defenition!
+#in keyword argument order of call doesn't matter!
+# def he(*arg) VARIABLE LENGTH ARGUMRNT
+#lambda <Lf() name>=lambda <arguments>:<expression>
+a=float(input("enter a floating point number:"))
+print("abs(a):",abs(a)) #sign change
+a=int(input("enter a  number:"))
+print("chr(a):",chr(a)) #asci char
+b=input("enter a  letter:")
+print("ord(b):",ord(b)) #asci val
+print("bin(a):",bin(int(a))) #to bin
+print("type(a):",type(a),"\nid(a):",id(a))
+#min(),max(),sum() in a list!
+print("d-b",format(a,'b')) #decimal to other conversion!
+print("d-o",format(a,'o'))
+print("d-o",format(a,'x'))   
+print("d-f",format(a,'f')) #decimal to FIXED POINT! 6prescision!
+a=input("enter a f numebr:")
+print("round(a)=",round(float(a)))
+#pow()
+#import math----> floor(),ceil(),sqrt()!!
+#eval() --> evaluvates the expresssion or statment or the varaible!
+
+----------------------------------------------------------------------------------------------------------------------------------
+STRINGS AND STRING MANUPULATIONS:
+-----------------------------------------------------------------------------------------------------------------------------------
+
+#strings are immutable!
+#-ve index from last!
+'''' int(x,2/10/8/16)''' #to decimal
+''' format(x,b/x/o/f)''' #decimal to others!!
+#str[ ]
+a=input("enter a sentance:")
+print("str length:",len(a)) #len()
+b,c=input("enter the word to be replaced:"),input("enter the NEW word:")
+print(a.replace(b,c)) #replace(old,new)
+#del a
+print(a *4) #repeats <str*num>
+#splice operator<[start,end,stride]> #end=end-1!!!!!!
+#formating strings %d,%s,%c (str%())
+# .format() { } -placeholders.....str.format()
+print(a.capitalize()) #.capitalixe()
+print(a.lower()) #small
+print(a.islower()) #if small
+print(a.isupper()) #if upper
+print(a.center(20,'$')) #.center(width,'symbol')
+print(a.find("abi",0,10)) #.find(substr,start,end)
+print(a.isalnum())#if alphanumerical
+print(a.isalpha())# if alphabets
+print(a.isdigit())#if nums
+print(a.title()) #1st leteer CAPS
+print(a.swapcase()) #swaps!
+print(a.islower()) #small
+print(a.islower())
+''' .count and .find '''
+#.counts substr .count(substr,start,end) 
+'''in and not in''' #are call MEMBERSHIP OPERATORS!!
+
+----------------------------------------------------------------------------------------------------------------------------------
+LIST,TUPLES,SETS,DICTIOANRY:
+-----------------------------------------------------------------------------------------------------------------------------------
+
+#LISTS is mutable!
+a=[1,'hello',3.14159,[2,4,6]]
+print(a," is my list")
+print("length of a:",len(a));
+a[0:4]=[1,2,3,4]
+a[3]='yo'
+#changing varaiables!
+print(a," is my list")
+print(a.append(5),'appended string')#.append() one element @once
+print(a," is my appended list")
+print(a.extend([6,7,8,9,10]),'extended string')#.extendd([ ]) more than one element @once
+print(a," is my extended list")
+print(a.insert(9,'hello I am replaced at index 9'))#.insert(index,element)
+print(a," is my list")
+del a[0]
+'''index know'''#del lname(index)/(range=>from to) 
+print(a,'deleted oth index')
+del a[0:6]#5th index
+print(a,'deleted o to 6-1th index!! index')
+print(a.remove(8),'elemnt 8 is removed')#index unknown!!! element known!!!
+print(a," is my list")
+b=a.pop(1) #index know!
+print(b,'is the pooped up element')
+a.clear()
+print(a," is my list without elemnets!!.")#clear() everything juts keeps th EMPTY list!!
+a=list(range(1,11,2)) #list from range()
+print(a," is my list using range!")
+c=a.copy()
+print(a," is my list",c,"is the copy")
+''' .count(substr,start,end).......counts the string'''# .count(value) in list counts the number of similar values! 
+''' similar to str.find() returns the index of the first elemennt! '''#.index(element)
+a.extend([3,3,3,3,3,3])
+print(a," is my list after extend!!")
+count=a.count(3)
+print(count,'  is the count of no of  3 in the list!')
+i=a.index(3)
+print(i," is the index of 1st no 3 in list after appending!!")
+del a[6:12]
+print("the list after deltion from index 6 to 11(12-1) is",a)
+a.reverse()
+print(a,'is the reversed string!')
+#.sort() ......default ascending,reverse is SET as true then descending!
+maxy=max(a) #max(list)
+miny=min(a) #min(list)
+sumy=sum(a)#sum(list)
+print("the max is {} and the minimum is {} and sum of the list is {}".format(maxy,miny,sumy))
+
+
+#TUPULES is immutable! [ ]----->() unordered hence no indices
+'''  list and tupules can be createed in empty a=[] , a=()'''
+a=tuple(a)#tuple from list!
+print(a,"a is a tuple!")
+#list and tuples are classes in python!
+del a
+t=tuple(list(range(0,30,2)))
+'''tuple assignement (a,b)=(1,2)'''
+def max_min(t):
+    max_=max(t)
+    min_=min(t)
+    return (max_,min_)
+(mx_val,mn_val)=max_min(t)
+print("the max is {} and min is {} of the tuple {}".format(mx_val,mn_val,t))
+
+#SETS are mutable an unique! and sets can have diff data type!
+t=set(t)
+print(t,"is a set")
+#.add()
+#A.union(B) |
+#A.intersection(B) &
+#A.symmetric_difference(B) ^ (A&B)-(A|B)
+#A.difference(B) A-B
+#is_prime
+
+''' THEY ARE
+    DATA STRUCTURE!!!'''
+#DICTIONARIES!!
+#var={key:value,}
+# create var{}
+#so, while the syntax for creating an empty set using {} appears similar to creating an empty dictionary,
+#Python interprets it as an empty dictionary. If you want to create an empty set, it's safer to use set() or {} with a space inside (i.e., { }).
+''' list=[z**2 for z in range(1,11)]
+    dict={x:x*2 for x in range(1,11}'''
+#acess using dict[key]
+#adding extra element dict[new key]=new val/element!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
