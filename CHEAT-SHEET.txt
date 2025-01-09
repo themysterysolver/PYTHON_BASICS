@@ -1,0 +1,66 @@
+# 1. Data Creation
+pd.DataFrame()                     # Create a DataFrame.
+pd.Series()                        # Create a Series.
+pd.read_csv('file.csv')            # Read a CSV file into a DataFrame.
+pd.read_excel('file.xlsx')         # Read an Excel file into a DataFrame.
+pd.DataFrame.from_dict(data_dict)  # Create a DataFrame from a dictionary.
+pd.concat([df1, df2])              # Concatenate DataFrames.
+
+# 2. Data Inspection
+df.head(n)                         # View the first n rows (default is 5).
+df.tail(n)                         # View the last n rows.
+df.info()                          # Summary of the DataFrame, including data types and non-null values.
+df.describe()                      # Statistical summary of numerical columns.
+df.shape                           # Get the dimensions of the DataFrame (rows, columns).
+df.columns                         # List column names.
+df.index                           # Get the index (row labels).
+
+# 3. Data Selection
+df['column'] or df.column          # Select a column.
+df.loc[row_label, col_label]       # Access rows and columns by labels.
+df.iloc[row_index, col_index]      # Access rows and columns by position.
+df[df['column'] > value]           # Filter rows based on a condition.
+
+# 4. Data Cleaning
+df.dropna()                        # Remove rows or columns with missing values.
+df.fillna(value)                   # Fill missing values with a specified value.
+df.isna() or df.isnull()           # Detect missing values.
+df.drop(columns=['col1', 'col2'])  # Drop specific columns.
+df.rename(columns={'old': 'new'})  # Rename columns.
+df.duplicated()                    # Detect duplicate rows.
+df.drop_duplicates()               # Remove duplicate rows.
+
+# 5. Data Transformation
+df.apply(func, axis=0 or 1)        # Apply a function along an axis (rows or columns).
+df.map(func)                       # Element-wise transformation for a Series.
+df.sort_values(by='column')        # Sort DataFrame by a column.
+df.sort_index()                    # Sort DataFrame by index.
+df.astype(dtype)                   # Change the data type of columns.
+df.replace({old_value: new_value}) # Replace values in the DataFrame.
+
+# 6. Data Aggregation and Grouping
+df.groupby('column')               # Group rows based on column values.
+df.agg(['mean', 'sum'])            # Apply multiple aggregation functions.
+df.sum(), df.mean(), df.min(), df.max(), df.count()  # Common aggregation functions.
+df.pivot_table(values='val', index='idx', columns='col')  # Create pivot tables.
+
+# 7. Joining and Merging
+pd.merge(df1, df2, on='column')    # Merge DataFrames based on a column.
+pd.concat([df1, df2])              # Concatenate DataFrames vertically or horizontally.
+df.join(df2, how='inner')          # Join DataFrames on index.
+
+# 8. File Input/Output
+df.to_csv('file.csv')              # Save the DataFrame as a CSV file.
+df.to_excel('file.xlsx')           # Save the DataFrame as an Excel file.
+pd.read_sql(query, connection)     # Load data from a SQL query.
+
+# 9. Statistical Functions
+df.corr()                          # Compute pairwise correlation of columns.
+df.cov()                           # Compute covariance of columns.
+df.value_counts()                  # Count unique values in a Series.
+df.nunique()                       # Count unique values in each column.
+
+# 10. Visualization (Integration with Matplotlib/Seaborn)
+df.plot()                          # Quick plotting of DataFrame/Series.
+df.hist()                          # Histogram of numerical columns.
+df.boxplot()                       # Boxplot for DataFrame.
