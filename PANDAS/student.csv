@@ -1,0 +1,8 @@
+StudentID, Name, Mathematics, Science, History, English, Geography
+101, Alice, 85, 89, 90, 88, 92
+102, Bob, 78, 74, 85, NaN, 81
+103, Charlie, 92, 95, 87, 90, NaN
+104, Diana, 88, 91, 93, 85, 89
+105, Ethan, 76, 80, 82, 78, 85
+106, Fiona, NaN, 88, 84, 82, 86
+107, George, 81, NaN, 89, 77, 83
